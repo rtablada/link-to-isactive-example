@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'link-to-isactive-example',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'none',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

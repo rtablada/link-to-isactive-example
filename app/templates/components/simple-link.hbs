@@ -1,6 +1,7 @@
 <a
   href={{url}}
   class="simple-link {{if isActive "active"}}"
+  data-test-simple={{@testSelector}}
   onclick={{action "navigate"}}
 >
   {{yield}}
