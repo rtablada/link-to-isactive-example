@@ -1,0 +1,40 @@
+<div class="flex">
+  <div class="child">
+    <h2>SimpleLink (Router.isActive)</h2>
+    <SimpleLink @routeName="index" @queryParams={{hash sort="quantity"}}>Sort=Quantity no Filter</SimpleLink>
+    <SimpleLink @routeName="index" @queryParams={{hash sort="date"}}>Sort=Date no Filter</SimpleLink>
+    <SimpleLink
+      @routeName="index"
+      @queryParams={{hash sort="quantity" filter="value:gte=3"}}
+    >
+      Sort=Quantity Filter=value:gte=3
+    </SimpleLink>
+    <SimpleLink
+      @routeName="index"
+      @queryParams={{hash sort="date" filter="value:gte=3"}}
+    >
+      Sort=Date Filter=value:gte=3
+    </SimpleLink>
+    <SimpleLink
+      @routeName="index"
+      @queryParams={{hash sort="date" filter="somethingelse"}}
+    >
+      Sort=Date Filter=somethingelse
+    </SimpleLink>
+  </div>
+
+  <div class="child">
+    <h2>Link To</h2>
+    {{#link-to "index" (query-params sort="quantity") class="btn"}}Sort=Quantity no Filter{{/link-to}}
+    {{#link-to "index" (query-params sort="date") class="btn"}}Sort=Date no Filter{{/link-to}}
+    {{#link-to "index" (query-params sort="quantity" filter="value:gte=3") class="btn"}}
+      Sort=Quantity Filter=value:gte=3
+    {{/link-to}}
+    {{#link-to "index" (query-params sort="date" filter="value:gte=3") class="btn"}}
+      Sort=Date Filter=value:gte=3
+    {{/link-to}}
+    {{#link-to "index" (query-params sort="date" filter="somethingelse") class="btn"}}
+      Sort=Date Filter=somethingelse
+    {{/link-to}}
+  </div>
+</div>

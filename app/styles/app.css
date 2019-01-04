@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+}
+
+.child {
+  flex-basis: 50%;
+  flex: 1;
+}
+
+.simple-link, .btn {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.active {
+  background: blue;
+  color: white;
+}
